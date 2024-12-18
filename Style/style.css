@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: #eee;
+}
+
+.content {
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.todo {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.todo h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.todo img {
+  width: 70px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #424242;
+}
+
+.form input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #eee;
+}
+
+.please-add {
+  border: 1px solid #e32636 !important;
+}
+
+.form button {
+  right: 30px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+  background-color: #3b71ca;
+}
+
+.form button:hover {
+  background-color: #3465b5;
+}
+
+.tasks {
+  margin-top: 50px;
+  padding: 40px 30px;
+  display: grid;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #424242;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #eee;
+  padding: 10px 10px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.task span:first-child {
+  margin-right: 10px;
+  width: 30px;
+}
+
+.task span img {
+  width: 100%;
+}
+
+.task:hover {
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.delete {
+  background-color: #e32636;
+  width: fit-content;
+  padding: 4px 6px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.delete:hover {
+  background-color: #ce2230;
+}
+
+.done {
+  text-decoration: line-through;
+  background-color: #b0b0b0;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.done::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-image: url("/Image/Check.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  visibility: visible;
+  left: 7.9px;
+}
+
+@media (max-width: 340px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form input {
+    width: 100% !important;
+  }
+
+  .form button {
+    word-break: break-all;
+  }
+
+  .tasks {
+    padding: 40px 20px;
+  }
+}
