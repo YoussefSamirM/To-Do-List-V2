@@ -139,7 +139,7 @@ body {
   content: "";
   width: 35px;
   height: 35px;
-  background-image: url("/Image/Check.png");
+  background-image: url("/./Image/Check.png");
   background-position: center;
   background-size: cover;
   position: absolute;
