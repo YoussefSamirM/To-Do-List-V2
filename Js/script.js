@@ -71,7 +71,7 @@ function addTasksToPage(arrayOfTasks) {
 
     let span = document.createElement("span");
     let img = document.createElement("img");
-    img.src = "..//Image/Circle.png";
+    img.src = ".//Image/Circle.png";
     span.appendChild(img);
     div.appendChild(span);
 
